@@ -4,10 +4,13 @@ import { Route, Routes } from 'react-router-dom';
 import Login from './Pages/Login/Login';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import Error from './Pages/Error/Error';
+import Header from './Pages/Header/Header';
 
 function App() {
   return (
     <div className="App">
+      <Header></Header>
       <Routes>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/about' element={<About></About>}></Route>
