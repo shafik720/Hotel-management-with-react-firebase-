@@ -12,6 +12,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='*' element={<Error></Error>}></Route>
       </Routes>
     </div>
   );
