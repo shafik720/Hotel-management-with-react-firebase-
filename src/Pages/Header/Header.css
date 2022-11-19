@@ -1,0 +1,12 @@
+
+.header-div{
+    background: linear-gradient(45deg, darkblue,#007ACC);
+    padding: 20px 0;
+}
+.header-div a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
