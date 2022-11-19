@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.header-icon{
+.header-icon-left{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +19,11 @@
 .header-icon span{
     font-size: 35px;
 }
+
+.menu-icon-one{
+    display: none;
+}
+
 .header-div a{
     text-decoration: none;
     margin: 0 15px;
@@ -49,8 +54,26 @@
 /* Media Query : */
 /* For mobile:  */
 @media only screen and (max-width:767px){
-
+    
 }
 
 /* For tablet:  */
-@media only screen and (min-width:768px) and (max-width:991px) {}
+@media only screen and (max-width:1025px) {
+    .header-menu{
+        display: none;
+    }
+    .header-icon{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header-icon span{
+        cursor: pointer;
+    }
+    .menu-icon-one{
+        display: block;
+        color: white;
+    }
+}

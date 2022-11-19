@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBed } from '@fortawesome/free-solid-svg-icons';
+import { faBed, faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 
 
 const Header = () => {
@@ -10,8 +10,13 @@ const Header = () => {
         <div className='header-parent'>
             <div className="header-div container">
                 <div className="header-icon">
-                    <span> <FontAwesomeIcon icon={faBed}></FontAwesomeIcon> </span>
-                    <h1>Hotel Finder</h1>
+                    <div className="header-icon-left">
+                        <span> <FontAwesomeIcon icon={faBed}></FontAwesomeIcon> </span>
+                        <h1>Hotel Finder</h1>
+                    </div>
+                    <div className="header-icon-right">
+                        <span className='menu-icon-one'> <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> </span>
+                    </div>
                 </div>
                 <div className="header-menu">
                     <nav>
@@ -22,6 +27,7 @@ const Header = () => {
                         <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
                     </nav>
                 </div>
+
             </div>
         </div>
     );
