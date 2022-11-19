@@ -7,8 +7,8 @@ import { faBed } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     return (
-        <div className=''>
-            <div className="header-div">
+        <div className='header-parent'>
+            <div className="header-div container">
                 <div className="header-icon">
                     <span> <FontAwesomeIcon icon={faBed}></FontAwesomeIcon> </span>
                     <h1>Hotel Finder</h1>

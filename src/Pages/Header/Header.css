@@ -1,16 +1,30 @@
 
-.header-div{
+
+.header-parent{
     background: linear-gradient(225deg, darkblue,#007ACC);
-    padding: 20px 15px;
+}
+.header-div{
+
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.header-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #FFB900;
+}
+.header-icon span{
+    font-size: 35px;
 }
 .header-div a{
     text-decoration: none;
     margin: 0 15px;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
 }
 
