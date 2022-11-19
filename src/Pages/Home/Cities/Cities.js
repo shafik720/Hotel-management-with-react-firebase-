@@ -4,7 +4,8 @@ import cox from '../../../assets/img/cox.jpg'
 
 const Cities = () => {
     return (
-        <div>
+        <div className='cities-parent'>
+            <h1>Select Your City</h1>
             <div className="cities">
                 <div draggable className="city">
                     <div className="city-img">

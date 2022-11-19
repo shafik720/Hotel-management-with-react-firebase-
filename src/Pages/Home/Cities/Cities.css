@@ -1,3 +1,8 @@
+
+
+.cities-parent h1{
+    margin: 50px 0;
+}
 .cities {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -29,7 +34,7 @@
 }
 
 .city:hover.city img {
-    border: 5px solid gold;
+    border: 5px solid orange;
 }
 
 .cities img {
