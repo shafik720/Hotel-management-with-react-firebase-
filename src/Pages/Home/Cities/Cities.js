@@ -6,7 +6,7 @@ const Cities = () => {
     return (
         <div>
             <div className="cities">
-                <div className="city">
+                <div draggable className="city">
                     <div className="city-img">
                         <img src={cox} alt="" />
                     </div>
