@@ -11,9 +11,11 @@ const Header = () => {
     function showMenu() {
         let parentMenu = document.getElementById('header-icon-right');
         let headerMenu = document.querySelector('.header-menu');
+        let headerMenuParent = document.querySelector('.header-menu-parent');
 
         parentMenu.classList.add('enable');
         headerMenu.classList.add('active');
+        headerMenuParent.classList.add('active');
 
     }
 
@@ -25,6 +27,18 @@ const Header = () => {
         headerMenu.classList.remove('active');
     }
 
+    function parentClick(e) {
+        console.log(e.target.className);
+        let parentMenu = document.getElementById('header-icon-right');
+        let headerMenu = document.querySelector('.header-menu');
+        let headerMenuParent = document.querySelector('.header-menu-parent');
+
+        if (e.target.className == 'header-menu-parent active') {
+            parentMenu.classList.remove('enable');
+            headerMenu.classList.remove('active');
+            headerMenuParent.classList.remove('active');
+        }
+    }
 
     return (
         <div className='header-parent'>
@@ -39,7 +53,7 @@ const Header = () => {
                         <div draggable onClick={hideMenu} className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </div>
                     </div>
                 </div>
-                <div className="header-menu-parent">
+                <div onClick={parentClick} className="header-menu-parent">
                     <div className="header-menu">
                         <nav>
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/'>Home</NavLink>

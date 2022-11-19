@@ -70,11 +70,23 @@
         right: 0;
     }
     
+    .header-menu-parent{
+        position: fixed;
+        background: black;
+        left: -500%;
+        top: 70px;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .header-menu-parent.active{
+        left: 0;
+    }
     .header-menu{
-        position: absolute;
+        position: fixed;
         background: #2C2C2C;
         left: -50%;
-        top: 100%;
+        top: 70px;
         width: 50%;
         height: 100vh;
         display: flex;
