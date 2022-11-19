@@ -1,6 +1,9 @@
 import React from 'react';
 import './Cities.css';
 import cox from '../../../assets/img/cox.jpg'
+import dhaka from '../../../assets/img/dhaka.jpg'
+import ctg from '../../../assets/img/ctg.jpg'
+import kuakata from '../../../assets/img/kuakata.jpg'
 
 const Cities = () => {
     return (
@@ -15,21 +18,21 @@ const Cities = () => {
                 </div>
                 <div draggable className="city">
                     <div className="city-img">
-                        <img src={cox} alt="" />
+                        <img src={dhaka} alt="" />
                     </div>
-                    <h2>Cox's Bazar</h2>
+                    <h2>Dhaka</h2>
                 </div>
                 <div draggable className="city">
                     <div className="city-img">
-                        <img src={cox} alt="" />
+                        <img src={ctg} alt="" />
                     </div>
-                    <h2>Cox's Bazar</h2>
+                    <h2>Chittagong</h2>
                 </div>
                 <div draggable className="city">
                     <div className="city-img">
-                        <img src={cox} alt="" />
+                        <img src={kuakata} alt="" />
                     </div>
-                    <h2>Cox's Bazar</h2>
+                    <h2>Kuakata</h2>
                 </div>
             </div>
         </div>
