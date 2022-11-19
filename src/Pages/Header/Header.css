@@ -72,7 +72,7 @@
     
     .header-menu-parent{
         position: fixed;
-        background: black;
+        background: rgba(0, 0, 0, 0.525);
         left: -500%;
         top: 70px;
         bottom: 0;
