@@ -22,9 +22,11 @@ const Header = () => {
     function hideMenu() {
         let parentMenu = document.getElementById('header-icon-right');
         let headerMenu = document.querySelector('.header-menu');
+        let headerMenuParent = document.querySelector('.header-menu-parent');
 
         parentMenu.classList.remove('enable');
         headerMenu.classList.remove('active');
+        headerMenuParent.classList.remove('active');
     }
 
     function parentClick(e) {
