@@ -1,7 +1,10 @@
 
 .header-div{
-    background: linear-gradient(45deg, darkblue,#007ACC);
-    padding: 20px 0;
+    background: linear-gradient(225deg, darkblue,#007ACC);
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .header-div a{
     text-decoration: none;
@@ -9,4 +12,8 @@
     color: white;
     font-size: 20px;
     font-weight: 600;
+}
+
+.header-div a:hover{
+    color: gold;
 }
