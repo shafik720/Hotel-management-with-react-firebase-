@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    color: #FFB900;
+    color: orange;
 }
 .header-icon span{
     font-size: 35px;
@@ -27,6 +27,11 @@
     font-size: 22px;
     font-weight: 600;
 }
+.header-div a.active {
+    color: orange;
+    border-bottom: 2px solid orange;
+  }
+
 
 .header-div a:hover{
     color: gold;

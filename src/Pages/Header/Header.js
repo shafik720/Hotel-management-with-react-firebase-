@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed } from '@fortawesome/free-solid-svg-icons';
@@ -14,11 +14,11 @@ const Header = () => {
                     <h1>Hotel Finder</h1>
                 </div>
                 <nav>
-                    <Link to='/'>Home</Link>
-                    <Link to='/about'>About</Link>
-                    <Link to='/contact'>Contact Us</Link>
-                    <Link to='/places'>Places</Link>
-                    <Link to='/login'>Login</Link>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/'>Home</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/about'>About</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/places'>Places</NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
                 </nav>
             </div>
         </div>
