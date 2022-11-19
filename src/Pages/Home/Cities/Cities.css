@@ -1,7 +1,10 @@
+.cities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+}
 
-
-
-.city{
+.city {
     border: 5px solid teal;
     width: 350px;
     height: 350px;
@@ -12,27 +15,50 @@
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    transition: all 0.2s ;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
 }
-.city:hover{
+
+.city:hover {
     background: #183153;
     color: white;
     box-shadow: none;
 }
-.city:hover.city img{
+
+.city:hover.city img {
     border: 5px solid gold;
 }
-.cities img{
-    width: 100%;    
+
+.cities img {
+    width: 100%;
 }
 
-.city img{
-    border: 5px solid crimson;
+.city img {
+    border: 5px solid grey;
     width: 250px;
     height: 250px;
     border-radius: 50%;
 }
-.city h2{
+
+.city h2 {
     margin-top: 15px;
+}
+
+
+
+
+/* For medium screen  */
+@media only screen and (max-width:767px) {
+    .cities {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1050px) {
+    .cities {
+        column-gap: 30px;
+    }
 }
