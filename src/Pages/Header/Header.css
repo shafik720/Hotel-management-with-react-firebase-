@@ -77,4 +77,13 @@
         display: block;
         color: white;
     }
+    .menu-icon-one.hidden{
+        display: none;
+    }
+    .menu-icon-two.hidden{
+        display: none;
+    }
+    .menu-icon-two.active{
+        display: block;
+    }
 }
