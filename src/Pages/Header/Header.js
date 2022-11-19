@@ -6,6 +6,18 @@ import { faBed, faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icon
 
 
 const Header = () => {
+
+
+    function showMenu() {        
+        let parentMenu = document.getElementById('header-icon-right');
+        parentMenu.classList.add('enable');        
+    }
+
+    function hideMenu(){
+        let parentMenu = document.getElementById('header-icon-right');
+        parentMenu.classList.remove('enable');  
+    }
+
     return (
         <div className='header-parent'>
             <div className="header-div container">
@@ -14,9 +26,9 @@ const Header = () => {
                         <span> <FontAwesomeIcon icon={faBed}></FontAwesomeIcon> </span>
                         <h1>Hotel Finder</h1>
                     </div>
-                    <div className="header-icon-right">
-                        <span className='menu-icon-one'> <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> </span>
-                        <span className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </span>
+                    <div className="header-icon-right" id='header-icon-right'>
+                        <div onClick={showMenu} className='menu-icon-one'> <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> </div>
+                        <div onClick={hideMenu} className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </div>
                     </div>
                 </div>
                 <div className="header-menu">

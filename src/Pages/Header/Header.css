@@ -22,6 +22,9 @@
 
 .menu-icon-one, .menu-icon-two{
     display: none;
+    color: white;
+    cursor: pointer;
+    font-size: 35px;
 }
 
 
@@ -77,13 +80,10 @@
         display: block;
         color: white;
     }
-    .menu-icon-one.hidden{
-        display: none;
-    }
-    .menu-icon-two.hidden{
-        display: none;
-    }
-    .menu-icon-two.active{
+    .header-icon-right.enable .menu-icon-two{
         display: block;
+    }
+    .header-icon-right.enable .menu-icon-one{
+        display: none;
     }
 }
