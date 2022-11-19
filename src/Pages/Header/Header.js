@@ -16,6 +16,7 @@ const Header = () => {
                     </div>
                     <div className="header-icon-right">
                         <span className='menu-icon-one'> <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> </span>
+                        <span className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </span>
                     </div>
                 </div>
                 <div className="header-menu">

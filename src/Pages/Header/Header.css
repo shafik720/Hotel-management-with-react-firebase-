@@ -20,9 +20,10 @@
     font-size: 35px;
 }
 
-.menu-icon-one{
+.menu-icon-one, .menu-icon-two{
     display: none;
 }
+
 
 .header-div a{
     text-decoration: none;
