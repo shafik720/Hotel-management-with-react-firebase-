@@ -8,21 +8,23 @@ import { faBed, faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icon
 const Header = () => {
 
 
-    function showMenu() {        
+    function showMenu() {
         let parentMenu = document.getElementById('header-icon-right');
         let headerMenu = document.querySelector('.header-menu');
 
-        parentMenu.classList.add('enable');        
+        parentMenu.classList.add('enable');
         headerMenu.classList.add('active');
+
     }
 
-    function hideMenu(){
+    function hideMenu() {
         let parentMenu = document.getElementById('header-icon-right');
         let headerMenu = document.querySelector('.header-menu');
 
-        parentMenu.classList.remove('enable');  
+        parentMenu.classList.remove('enable');
         headerMenu.classList.remove('active');
     }
+
 
     return (
         <div className='header-parent'>
@@ -37,14 +39,16 @@ const Header = () => {
                         <div draggable onClick={hideMenu} className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </div>
                     </div>
                 </div>
-                <div className="header-menu">
-                    <nav>
-                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/'>Home</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/about'>About</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/places'>Places</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
-                    </nav>
+                <div className="header-menu-parent">
+                    <div className="header-menu">
+                        <nav>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/'>Home</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/about'>About</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/places'>Places</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
+                        </nav>
+                    </div>
                 </div>
 
             </div>
