@@ -64,7 +64,24 @@
 /* For tablet:  */
 @media only screen and (max-width:1025px) {
     .header-menu{
-        display: none;
+        position: absolute;
+        background: #2C2C2C;
+        left: -50%;
+        top: 10%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+    .header-menu.active{
+        left: 0;;
+    }
+    .header-menu nav{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 30px;
     }
     .header-icon{
         display: flex;

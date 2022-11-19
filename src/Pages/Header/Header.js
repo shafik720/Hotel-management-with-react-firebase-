@@ -10,12 +10,18 @@ const Header = () => {
 
     function showMenu() {        
         let parentMenu = document.getElementById('header-icon-right');
+        let headerMenu = document.querySelector('.header-menu');
+
         parentMenu.classList.add('enable');        
+        headerMenu.classList.add('active');
     }
 
     function hideMenu(){
         let parentMenu = document.getElementById('header-icon-right');
+        let headerMenu = document.querySelector('.header-menu');
+
         parentMenu.classList.remove('enable');  
+        headerMenu.classList.remove('active');
     }
 
     return (
@@ -27,8 +33,8 @@ const Header = () => {
                         <h1>Hotel Finder</h1>
                     </div>
                     <div className="header-icon-right" id='header-icon-right'>
-                        <div onClick={showMenu} className='menu-icon-one'> <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> </div>
-                        <div onClick={hideMenu} className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </div>
+                        <div draggable onClick={showMenu} className='menu-icon-one'> <FontAwesomeIcon icon={faBars}></FontAwesomeIcon> </div>
+                        <div draggable onClick={hideMenu} className='menu-icon-two hidden'> <FontAwesomeIcon icon={faBarsStaggered}></FontAwesomeIcon> </div>
                     </div>
                 </div>
                 <div className="header-menu">
