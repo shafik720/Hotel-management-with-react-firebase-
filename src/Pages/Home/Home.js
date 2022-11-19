@@ -3,8 +3,7 @@ import Cities from './Cities/Cities';
 
 const Home = () => {
     return (
-        <div className='container'>
-            <h2>Home Page</h2>
+        <div className='container my-4'>
             <Cities></Cities>
         </div>
     );

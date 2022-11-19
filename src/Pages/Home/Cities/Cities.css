@@ -1,0 +1,29 @@
+
+
+
+.city{
+    border: 5px solid teal;
+    width: 350px;
+    height: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cities img{
+    width: 100%;    
+}
+.city-img{
+    padding-top: 25px;
+}
+.city img{
+    border: 5px solid crimson;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.city h2{
+    margin-top: 20px;
+}
