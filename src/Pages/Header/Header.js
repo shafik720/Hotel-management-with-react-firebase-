@@ -13,13 +13,15 @@ const Header = () => {
                     <span> <FontAwesomeIcon icon={faBed}></FontAwesomeIcon> </span>
                     <h1>Hotel Finder</h1>
                 </div>
-                <nav>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/'>Home</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/about'>About</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/places'>Places</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
-                </nav>
+                <div className="header-menu">
+                    <nav>
+                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/'>Home</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/about'>About</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/places'>Places</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
+                    </nav>
+                </div>
             </div>
         </div>
     );

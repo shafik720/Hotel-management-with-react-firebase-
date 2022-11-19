@@ -4,7 +4,6 @@
     background: linear-gradient(225deg, darkblue,#007ACC);
 }
 .header-div{
-
     padding: 10px 15px;
     display: flex;
     align-items: center;
@@ -36,3 +35,22 @@
 .header-div a:hover{
     color: gold;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query : */
+/* For mobile:  */
+@media only screen and (max-width:767px){
+
+}
+
+/* For tablet:  */
+@media only screen and (min-width:768px) and (max-width:991px) {}
