@@ -20,12 +20,13 @@
     color: white;
     box-shadow: none;
 }
+.city:hover.city img{
+    border: 5px solid gold;
+}
 .cities img{
     width: 100%;    
 }
-.city-img{
-    /* padding-top: 15px; */
-}
+
 .city img{
     border: 5px solid crimson;
     width: 250px;
