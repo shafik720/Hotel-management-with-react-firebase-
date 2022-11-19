@@ -28,12 +28,11 @@ const Header = () => {
     }
 
     function parentClick(e) {
-        console.log(e.target.className);
         let parentMenu = document.getElementById('header-icon-right');
         let headerMenu = document.querySelector('.header-menu');
         let headerMenuParent = document.querySelector('.header-menu-parent');
-
-        if (e.target.className === 'header-menu-parent active') {
+        console.log(e.target.className);
+        if (e.target.className === 'header-menu-parent active' || e.target.className === 'inactive') {
             parentMenu.classList.remove('enable');
             headerMenu.classList.remove('active');
             headerMenuParent.classList.remove('active');

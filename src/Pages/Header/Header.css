@@ -57,14 +57,14 @@
 
 /* Media Query : */
 /* For mobile:  */
-@media only screen and (max-width:767px){
-    
-}
 
 /* For tablet:  */
 @media only screen and (max-width:1025px) {
+    /* .cities-parent , .about-div, .contact-div, .error-div{
+        margin-top: 100px;
+    } */
     .header-parent{
-        position: fixed;
+        /* position: fixed; */
         top: 0;
         left: 0;
         right: 0;
