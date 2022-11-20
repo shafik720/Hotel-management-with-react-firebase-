@@ -7,6 +7,11 @@ import Contact from './Pages/Contact/Contact';
 import Error from './Pages/Error/Error';
 import Header from './Pages/Header/Header';
 import Home from './Pages/Home/Home';
+import Coxbazar from './Pages/Home/Cities/Coxbazar/Coxbazar';
+import Dhaka from './Pages/Home/Cities/Dhaka/Dhaka';
+import Ctg from './Pages/Home/Cities/Ctg/Ctg';
+import Kuakata from './Pages/Home/Cities/Kuakata/Kuakata';
+import Cities from './Pages/Home/Cities/Cities';
 
 function App() {
   return (
@@ -17,6 +22,11 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/cities' element={<Cities></Cities>}></Route>
+        <Route path='/coxbazar' element={<Coxbazar></Coxbazar>}></Route>
+        <Route path='/dhaka' element={<Dhaka></Dhaka>}></Route>
+        <Route path='/kuakata' element={<Kuakata></Kuakata>}></Route>
+        <Route path='/ctg' element={<Ctg></Ctg>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
     </div>
