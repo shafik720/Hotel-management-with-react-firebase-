@@ -8,6 +8,7 @@ const HotelDisplay = (props) => {
             <div className=" hotel-single-card h-100">
                 <div className="hotel-img-div">
                     <img src={thumbImg} alt="" />
+                    <span> hello {stars}</span>
                 </div>
                 <h2>{hotelName} </h2>
                 <div className="desc-div">

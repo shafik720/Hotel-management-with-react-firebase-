@@ -12,10 +12,12 @@
     overflow: hidden;
     height: 200px;
     border-radius: 5px;
+    position: relative;
 }
 .hotel-img-div img{
     width: 100%;
     border-radius: 5px;
+    z-index: -10;
 }
 
 .desc-div{
@@ -44,4 +46,18 @@
     font-size: 18px;
     background: linear-gradient(45deg, teal, darkblue) ;
     color: white;
+}
+
+/* star display  */
+.hotel-img-div span{
+    color: red;
+    background-color: gold;
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    top: 5px ;
+    left: 5px;
+    padding: 5px;
+    border: 3px solid #2a2a2a;
+    border-radius: 5px;
 }
