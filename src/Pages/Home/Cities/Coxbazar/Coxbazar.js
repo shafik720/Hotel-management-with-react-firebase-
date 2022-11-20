@@ -10,7 +10,7 @@ const Coxbazar = () => {
     },[])
     return (
         <div>
-            <h2>Hotels In Cox's Bazar</h2>
+            <h2 className='text-center mt-5'>Hotels In Cox's Bazar</h2>
             <div className="hotels-div container my-5">
                 <div className="row gy-4">
                 {
