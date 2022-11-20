@@ -1,0 +1,15 @@
+
+
+
+.hotel-single-card{
+    border: 3px solid teal;
+}
+.hotel-img-div{
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 250px;
+}
+.hotel-img-div img{
+    width: 100%;
+}

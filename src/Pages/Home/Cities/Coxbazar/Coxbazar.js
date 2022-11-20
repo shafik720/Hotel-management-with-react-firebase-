@@ -12,7 +12,7 @@ const Coxbazar = () => {
         <div>
             <h2>Hotels In Cox's Bazar</h2>
             <div className="hotels-div container my-5">
-                <div className="row">
+                <div className="row gy-4">
                 {
                     hotels.map(index=> index.city === 'coxbazar' && <HotelDisplay 
                     key = {index.id}
