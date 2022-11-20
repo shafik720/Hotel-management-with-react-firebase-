@@ -1,5 +1,8 @@
 import React from 'react';
-import './HotelDisplay.css'
+import './HotelDisplay.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 const HotelDisplay = (props) => {
     let { thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
@@ -8,7 +11,7 @@ const HotelDisplay = (props) => {
             <div className=" hotel-single-card h-100">
                 <div className="hotel-img-div">
                     <img src={thumbImg} alt="" />
-                    <span> hello {stars}</span>
+                    <span>{stars} <FontAwesomeIcon icon={faStar}></FontAwesomeIcon> </span>
                 </div>
                 <h2>{hotelName} </h2>
                 <div className="desc-div">
