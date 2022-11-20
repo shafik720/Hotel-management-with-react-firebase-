@@ -58,20 +58,20 @@ let allHotels = [
     {
         id : 4,
         city : 'dhaka',
-        hotelName : 'Hotel Dhaka',
-        ratings : 6.2,
-        price : 300,
+        hotelName : 'Royal Paradise',
+        ratings : 7.2,
+        price : 1300,
         beds : ['Single Bed','Double Bed','Family Suit','Vip'],
         freeWifi : 'yes',
         freeParking : 'yes',
         airportShuttle : 'yes',
         restaurant : 'yes',
         bar : 'yes',
-        swimmingPool : 'no',
-        beachFront : 'no',
-        stars : 0,
-        fitnessCenter: 'no',
-        thumbImg : 'https://i.ibb.co/PNkMDGn/sea-shine.jpg'
+        swimmingPool : 'yes',
+        beachFront : 'yes',
+        stars : 4,
+        fitnessCenter: 'yes',
+        thumbImg : 'https://i.ibb.co/jLnHCK3/dhaka-royal-paradis.jpg'
     },
     {
         id : 5,
@@ -127,4 +127,39 @@ let allHotels = [
         fitnessCenter: 'no',
         thumbImg : 'https://i.ibb.co/1937C52/well-park-ctg.jpg'
     },
+    {
+        id : 8,
+        city : 'dhaka',
+        hotelName : 'Hotel Enchanted',
+        ratings : 6.5,
+        price : 700,
+        beds : ['Single Bed','Double Bed','Family Suit','Vip'],
+        freeWifi : 'yes',
+        freeParking : 'yes',
+        airportShuttle : 'no',
+        restaurant : 'yes',
+        bar : 'no',
+        swimmingPool : 'no',
+        beachFront : 'no',
+        stars : 3,
+        fitnessCenter: 'no',
+        thumbImg : 'https://i.ibb.co/HGTGdDP/dhaka-inchanted.jpg'
+    },{
+        id : 9,
+        city : 'dhaka',
+        hotelName : 'Hotel FAARS',
+        ratings : 8.2,
+        price : 1300,
+        beds : ['Single Bed','Double Bed','Family Suit','Vip'],
+        freeWifi : 'yes',
+        freeParking : 'yes',
+        airportShuttle : 'yes',
+        restaurant : 'yes',
+        bar : 'yes',
+        swimmingPool : 'yes',
+        beachFront : 'yes',
+        stars : 4,
+        fitnessCenter: 'yes',
+        thumbImg : 'https://i.ibb.co/tmSfRSB/dhaka-hotel-fars.jpg'
+    }
 ]
