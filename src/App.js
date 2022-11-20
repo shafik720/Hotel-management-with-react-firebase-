@@ -15,7 +15,7 @@ import Cities from './Pages/Home/Cities/Cities';
 
 function App() {
   return (
-    <div className="App main-div">
+    <div className=" main-div">
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
