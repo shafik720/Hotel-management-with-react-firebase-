@@ -8,8 +8,18 @@ import { useNavigate } from 'react-router-dom';
 
 const Cities = () => {
     let navigate = useNavigate();
+
     function navigateCoxbazar(){
         navigate('/coxbazar');
+    }
+    function navigateDhaka(){
+        navigate('/dhaka');
+    }
+    function navigateCtg(){
+        navigate('/ctg');
+    }
+    function navigateKuakata(){
+        navigate('/kuakata');
     }
     return (
         <div className='cities-parent'>
@@ -21,19 +31,19 @@ const Cities = () => {
                     </div>
                     <h2>Cox's Bazar</h2>
                 </div>
-                <div draggable className="city">
+                <div onClick={navigateDhaka} draggable className="city">
                     <div className="city-img">
                         <img src={dhaka} alt="" />
                     </div>
                     <h2>Dhaka</h2>
                 </div>
-                <div draggable className="city">
+                <div onClick={navigateCtg} draggable className="city">
                     <div className="city-img">
                         <img src={ctg} alt="" />
                     </div>
                     <h2>Chittagong</h2>
                 </div>
-                <div draggable className="city">
+                <div onClick={navigateKuakata} draggable className="city">
                     <div className="city-img">
                         <img src={kuakata} alt="" />
                     </div>
