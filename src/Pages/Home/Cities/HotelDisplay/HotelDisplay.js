@@ -26,6 +26,7 @@ const HotelDisplay = (props) => {
                         <p>Airport Shuttle : {airportShuttle} </p>
                     </div>
                 </div>
+                <button className='book-button'>Book Now</button>
             </div>
         </div>
     );
