@@ -12,8 +12,8 @@ const HotelDisplay = (props) => {
                 <h2>{hotelName} </h2>
                 <div className="desc-div">
                     <div className="desc-left">
-                        <p>Ratings : {ratings} </p>
-                        <p>Price : {price} </p>
+                        <p>Ratings : <span className='darkRed-text'>{ratings}</span> </p>
+                        <p>Price : <span className='darkRed-text'>{price}</span>  </p>
                         <p>Fitness Center : {fitnessCenter} </p>
                     </div>
                     <div className="desc-right">
