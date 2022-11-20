@@ -2,14 +2,23 @@
 
 
 .hotel-single-card{
-    border: 3px solid teal;
+    border: 5px solid teal;
+    border-radius: 5px;
+    padding: 0 15px;
 }
 .hotel-img-div{
-    width: 90%;
+    width: 100%;
     margin: 20px auto;
     overflow: hidden;
     height: 200px;
 }
 .hotel-img-div img{
     width: 100%;
+    border-radius: 5px;
+}
+
+.desc-div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 15px 0 10px;
 }

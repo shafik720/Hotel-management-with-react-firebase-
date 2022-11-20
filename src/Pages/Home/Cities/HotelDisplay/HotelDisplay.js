@@ -7,11 +7,21 @@ const HotelDisplay = (props) => {
         <div className='col-lg-4 col-md-6'>
             <div className=" hotel-single-card h-100">
                 <div className="hotel-img-div">
-                    <img src={thumbImg}  alt="" />
+                    <img src={thumbImg} alt="" />
                 </div>
                 <h2>{hotelName} </h2>
-                <p>Ratings : {ratings} </p>
-                <p>Price : {price} </p>
+                <div className="desc-div">
+                    <div className="desc-left">
+                        <p>Ratings : {ratings} </p>
+                        <p>Price : {price} </p>
+                        <p>Fitness Center : {fitnessCenter} </p>
+                    </div>
+                    <div className="desc-right">
+                        <p>Swimming Pool : {swimmingPool} </p>
+                        <p>Free Wifi : {freeWifi} </p>
+                        <p>Parking : {freeParking} </p>
+                    </div>
+                </div>
             </div>
         </div>
     );
