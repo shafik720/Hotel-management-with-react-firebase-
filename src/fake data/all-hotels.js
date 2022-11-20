@@ -37,7 +37,7 @@ let allHotels = [
         thumbImg : 'https://i.ibb.co/yYc2MQs/sea-crown.jpg'
     },
     {
-        id : 1,
+        id : 3,
         city : 'coxbazar',
         hotelName : 'Hotel Sea Crown',
         ratings : 6.2,
