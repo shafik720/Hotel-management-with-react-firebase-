@@ -14,10 +14,10 @@ const Coxbazar = () => {
             <div className="hotels-div container my-5">
                 <div className="row">
                 {
-                    hotels.map(index=><HotelDisplay 
-                        key = {index.id}
-                        index={index}
-                    ></HotelDisplay>)
+                    hotels.map(index=> index.city === 'coxbazar' && <HotelDisplay 
+                    key = {index.id}
+                    index={index}
+                ></HotelDisplay>)
                 }                    
                 </div>
                 

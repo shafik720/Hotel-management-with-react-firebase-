@@ -53,5 +53,23 @@ let allHotels = [
         stars : 0,
         fitnessCenter: 'no',
         thumbImg : 'https://i.ibb.co/PNkMDGn/sea-shine.jpg'
+    },
+    {
+        id : 4,
+        city : 'Dhaka',
+        hotelName : 'Hotel Dhaka',
+        ratings : 6.2,
+        price : 300,
+        beds : ['Single Bed','Double Bed','Family Suit','Vip'],
+        freeWifi : 'yes',
+        freeParking : 'yes',
+        airportShuttle : 'yes',
+        restaurant : 'yes',
+        bar : 'yes',
+        swimmingPool : 'no',
+        beachFront : 'no',
+        stars : 0,
+        fitnessCenter: 'no',
+        thumbImg : 'https://i.ibb.co/PNkMDGn/sea-shine.jpg'
     }
 ]
