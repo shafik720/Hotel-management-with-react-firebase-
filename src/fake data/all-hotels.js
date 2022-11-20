@@ -54,24 +54,7 @@ let allHotels = [
         fitnessCenter: 'no',
         thumbImg : 'https://i.ibb.co/PNkMDGn/sea-shine.jpg'
     },
-    {
-        id : 4,
-        city : 'dhaka',
-        hotelName : 'Hotel Dhaka',
-        ratings : 6.2,
-        price : 300,
-        beds : ['Single Bed','Double Bed','Family Suit','Vip'],
-        freeWifi : 'yes',
-        freeParking : 'yes',
-        airportShuttle : 'yes',
-        restaurant : 'yes',
-        bar : 'yes',
-        swimmingPool : 'no',
-        beachFront : 'no',
-        stars : 0,
-        fitnessCenter: 'no',
-        thumbImg : 'https://i.ibb.co/PNkMDGn/sea-shine.jpg'
-    },
+    
     {
         id : 4,
         city : 'dhaka',
@@ -109,7 +92,7 @@ let allHotels = [
         thumbImg : 'https://i.ibb.co/2yxjfqy/hotel-agrabad-ctg.jpg'
     },
     {
-        id : 5,
+        id : 6,
         city : 'ctg',
         hotelName : 'Radison Blue',
         ratings : 9.2,
@@ -124,10 +107,10 @@ let allHotels = [
         beachFront : 'yes',
         stars : 5,
         fitnessCenter: 'yes',
-        thumbImg : 'https://i.ibb.co/1937C52/well-park-ctg.jpg'
+        thumbImg : 'https://i.ibb.co/PF7mYMP/radison-blu-ctg.jpg'
     },
     {
-        id : 6,
+        id : 7,
         city : 'ctg',
         hotelName : 'Well Park',
         ratings : 6.2,

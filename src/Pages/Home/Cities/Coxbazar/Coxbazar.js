@@ -19,8 +19,7 @@ const Coxbazar = () => {
                     index={index}
                 ></HotelDisplay>)
                 }                    
-                </div>
-                
+                </div>                
             </div>
         </div>
     );
