@@ -15,11 +15,15 @@ const HotelDisplay = (props) => {
                         <p>Ratings : <span className='darkRed-text'>{ratings}</span> </p>
                         <p>Price : <span className='darkRed-text'>{price}</span>  </p>
                         <p>Fitness Center : {fitnessCenter} </p>
+                        <p>Beach Front : {beachFront} </p>
+                        <p>Restaurant : {restaurant} </p>
                     </div>
                     <div className="desc-right">
                         <p>Swimming Pool : {swimmingPool} </p>
                         <p>Free Wifi : {freeWifi} </p>
                         <p>Parking : {freeParking} </p>
+                        <p>Bar : {bar} </p>
+                        <p>Airport Shuttle : {airportShuttle} </p>
                     </div>
                 </div>
             </div>

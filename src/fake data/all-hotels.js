@@ -39,7 +39,7 @@ let allHotels = [
     {
         id : 3,
         city : 'coxbazar',
-        hotelName : 'Hotel Sea Crown',
+        hotelName : 'Hotel Sea Shine',
         ratings : 6.2,
         price : 300,
         beds : ['Single Bed','Double Bed','Family Suit','Vip'],
