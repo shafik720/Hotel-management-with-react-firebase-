@@ -4,13 +4,18 @@ import cox from '../../../assets/img/cox.jpg'
 import dhaka from '../../../assets/img/dhaka.jpg'
 import ctg from '../../../assets/img/ctg.jpg'
 import kuakata from '../../../assets/img/kuakata.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const Cities = () => {
+    let navigate = useNavigate();
+    function navigateCoxbazar(){
+        navigate('/coxbazar');
+    }
     return (
         <div className='cities-parent'>
             <h1>Select Your City</h1>
             <div className="cities">
-                <div draggable className="city">
+                <div onClick={navigateCoxbazar} draggable className="city">
                     <div className="city-img">
                         <img src={cox} alt="" />
                     </div>
