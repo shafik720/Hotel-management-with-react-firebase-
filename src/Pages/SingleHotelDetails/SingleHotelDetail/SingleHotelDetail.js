@@ -3,14 +3,15 @@ import './SingleHotelDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faUmbrellaBeach, faUtensils, faPersonSwimming, faWifi, faCar, faChampagneGlasses, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 import RoomTable from './RoomTable/RoomTable';
+import SingleHotel from './SingleHotel/SingleHotel';
 
 
 const SingleHotelDetail = (props) => {
     let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
     let roomDetails = props.index.rooms;
     // console.log(roomDetails);
-    // for(let element in roomDetails){
-    //     // console.log(element)
+    // for(let element of roomDetails){
+    //     console.log(element)
     // }
     return (
         <div className='container'>
@@ -46,7 +47,7 @@ const SingleHotelDetail = (props) => {
                 </div>
             </div>
 
-             {/*------------------ table for every single hotels with hotel details -------------- */}
+            {/*------------------ table for every single hotels with hotel details -------------- */}
             {/* <div className="row">
                 <div className="col-lg-12">
                     <div className="">
@@ -74,6 +75,23 @@ const SingleHotelDetail = (props) => {
                     </div>
                 </div>
             </div> */}
+            <div className="row">
+            <div className=" col-lg-12 table table-header">
+                        <h2>Room Type</h2>
+                        <h2>Sleeps</h2>
+                        <h2>Price</h2>
+                        <h2>Book</h2>
+                    </div>
+                <div className="col-lg-12">                    
+                    <div className="">
+                        {
+                            roomDetails.map(index => <SingleHotel
+                                index={index}
+                            ></SingleHotel>)
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

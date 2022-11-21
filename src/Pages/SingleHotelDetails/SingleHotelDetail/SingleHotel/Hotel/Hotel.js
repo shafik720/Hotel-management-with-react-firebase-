@@ -1,11 +1,9 @@
 import React from 'react';
-import './RoomTableTr.css'
+import './Hotel.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faBaby, faUsersLine, faUserTie, faRestroom , faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 
-
-const RoomTableTr = (props) => {
-    
+const Hotel = (props) => {
     //------------- making icons for showing bed quantity in the table area for every specific hotels
     let executiveSingleRoom = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> </span>;
     let double = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> <FontAwesomeIcon icon={faUser} /> </span>;
@@ -15,7 +13,6 @@ const RoomTableTr = (props) => {
     let family = <span className='bedIcon'><FontAwesomeIcon icon={faUsersLine} /> </span>;
     let familyExecutive = <span className='bedIcon'><FontAwesomeIcon icon={faPeopleRoof} /> </span>;;
     let presidential = <span className='bedIcon'><FontAwesomeIcon icon={faUserTie} /> </span>;
-
     let td = props.index;
     if(td == 1){
         td = executiveSingleRoom;
@@ -42,10 +39,10 @@ const RoomTableTr = (props) => {
         td = presidential;
     }
     return (
-        <td>
-            {td}                 
-        </td>
+        <div className='hotelx'>
+            {td}
+        </div>
     );
 };
 
-export default RoomTableTr;
+export default Hotel;
