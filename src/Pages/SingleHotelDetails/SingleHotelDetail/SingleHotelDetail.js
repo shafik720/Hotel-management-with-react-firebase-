@@ -80,7 +80,7 @@ const SingleHotelDetail = (props) => {
                         <h2>Room Type</h2>
                         <h2>Sleeps</h2>
                         <h2>Price</h2>
-                        <h2>Book</h2>
+                        <h2 className='text-center'>Book</h2>
                     </div>
                 <div className="col-lg-12">                    
                     <div className="">
