@@ -1,7 +1,7 @@
 import React from 'react';
 import './SingleHotelDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDumbbell, faUmbrellaBeach, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faDumbbell, faUmbrellaBeach, faUtensils, faPersonSwimming, faWifi, faCar, faChampagneGlasses, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
 
 
 const SingleHotelDetail = (props) => {
@@ -27,11 +27,11 @@ const SingleHotelDetail = (props) => {
                             <div className="col-lg-6">
                                 <div className="">
                                     <div className="singleHotel-desc-left">
-                                        <p>Swimming Pool : {swimmingPool} </p>
-                                        <p>Free Wifi : {freeWifi} </p>
-                                        <p>Parking : {freeParking} </p>
-                                        <p>Bar : {bar} </p>
-                                        <p>Airport Shuttle : {airportShuttle} </p>
+                                        <p><span className='iconBox'><FontAwesomeIcon icon={faPersonSwimming}></FontAwesomeIcon></span>Swimming Pool : {swimmingPool} </p>
+                                        <p><span className='iconBox'><FontAwesomeIcon icon={faWifi}></FontAwesomeIcon></span>Free Wifi : {freeWifi} </p>
+                                        <p><span className='iconBox'><FontAwesomeIcon icon={faCar}></FontAwesomeIcon></span>Parking : {freeParking} </p>
+                                        <p><span className='iconBox'><FontAwesomeIcon icon={faChampagneGlasses}></FontAwesomeIcon></span>Bar : {bar} </p>
+                                        <p><span className='iconBox'><FontAwesomeIcon icon={faPlaneDeparture}></FontAwesomeIcon></span>Airport Shuttle : {airportShuttle} </p>
                                     </div>
                                 </div>
                             </div>
