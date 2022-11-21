@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useHotels from '../../../../Hooks/useHotels';
 import HotelDisplay from '../HotelDisplay/HotelDisplay';
 
 const Ctg = () => {
-    let[hotels, setHotels] = useState([]);
-    useEffect(()=>{
-        fetch('all-hotels.json')
-        .then(res=>res.json())
-        .then(data=>setHotels(data))
-    },[])
+    let[hotels, setHotels] = useHotels();
+    
     return (
         <div>
             <h2 className='text-center mt-5'>Hotels In Chittagong</h2>
