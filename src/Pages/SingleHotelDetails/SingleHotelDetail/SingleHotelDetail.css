@@ -36,3 +36,11 @@
     padding: 15px;
     border-radius: 5px;
 }
+.table-div td {
+    font-weight: 700;
+    font-size: 18px;
+}
+.table-div th{
+    font-size: 22px;
+    font-weight: 800;
+}

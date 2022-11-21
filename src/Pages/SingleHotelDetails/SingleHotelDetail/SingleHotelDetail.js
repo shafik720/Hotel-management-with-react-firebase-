@@ -59,16 +59,6 @@ const SingleHotelDetail = (props) => {
                                                 index = {index}
                                             ></RoomTable>)
                                         }
-                                        {/* <tr>
-                                            <td>Double Room</td>
-                                            <td>Double</td>
-                                            <td>Price : 750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Single Room</td>
-                                            <td>Single</td>
-                                            <td>Price : 550</td>
-                                        </tr> */}
                                         </tbody>
                                     </table>
                                 </div>

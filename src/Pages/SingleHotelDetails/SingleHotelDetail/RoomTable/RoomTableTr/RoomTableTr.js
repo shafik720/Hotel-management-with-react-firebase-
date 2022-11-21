@@ -1,4 +1,5 @@
 import React from 'react';
+import './RoomTableTr.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faBaby } from '@fortawesome/free-solid-svg-icons';
 
