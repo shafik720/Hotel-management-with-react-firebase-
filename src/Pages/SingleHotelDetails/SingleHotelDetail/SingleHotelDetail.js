@@ -37,7 +37,30 @@ const SingleHotelDetail = (props) => {
                             </div>
                         </div>
 
-                        
+                        <div className="row my-5">
+                            <div className="col-lg-12">
+                                <h2 className='text-center mb-4'>Room Type & Price</h2>
+                                <div className="table-div ">
+                                    <table className='text-center'>
+                                        <tr>
+                                            <th>Room Type</th>
+                                            <th>Sleeps</th>
+                                            <th>Price</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Double Room</td>
+                                            <td>Double</td>
+                                            <td>Price : 750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Single Room</td>
+                                            <td>Single</td>
+                                            <td>Price : 550</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
