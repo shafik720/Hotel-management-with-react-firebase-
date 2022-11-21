@@ -33,7 +33,6 @@ const Header = () => {
         let parentMenu = document.getElementById('header-icon-right');
         let headerMenu = document.querySelector('.header-menu');
         let headerMenuParent = document.querySelector('.header-menu-parent');
-        console.log(e.target.className);
         if (e.target.className === 'header-menu-parent active' || e.target.className === 'inactive') {
             parentMenu.classList.remove('enable');
             headerMenu.classList.remove('active');

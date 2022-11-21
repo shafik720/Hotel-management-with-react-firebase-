@@ -5,7 +5,10 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 const HotelDisplay = (props) => {
-    let { thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
+    let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
+    function goToSingleHotel(element){
+        console.log(element);
+    }
     return (
         <div className='col-lg-4 col-md-6'>
             <div className=" hotel-single-card h-100">
@@ -30,7 +33,7 @@ const HotelDisplay = (props) => {
                         <p>Airport Shuttle : {airportShuttle} </p>
                     </div>
                 </div>
-                <button className='book-button'>Book Now</button>
+                <button onClick={()=>goToSingleHotel(id)} className='book-button'>Book Now</button>
             </div>
         </div>
     );

@@ -12,6 +12,7 @@ import Dhaka from './Pages/Home/Cities/Dhaka/Dhaka';
 import Ctg from './Pages/Home/Cities/Ctg/Ctg';
 import Kuakata from './Pages/Home/Cities/Kuakata/Kuakata';
 import Cities from './Pages/Home/Cities/Cities';
+import SingleHotelDetails from './Pages/SingleHotelDetails/SingleHotelDetails';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/cities' element={<Cities></Cities>}></Route>
+        <Route path='/cities:hotelId' element={<SingleHotelDetails></SingleHotelDetails>}></Route>
         <Route path='/coxbazar' element={<Coxbazar></Coxbazar>}></Route>
         <Route path='/dhaka' element={<Dhaka></Dhaka>}></Route>
         <Route path='/kuakata' element={<Kuakata></Kuakata>}></Route>
