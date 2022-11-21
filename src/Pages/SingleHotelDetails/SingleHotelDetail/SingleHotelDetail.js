@@ -42,23 +42,30 @@ const SingleHotelDetail = (props) => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
+             {/*------------------ table for every single hotels with hotel details -------------- */}
+            {/* <div className="row">
+                <div className="col-lg-12">
+                    <div className="">
                         <div className="row my-5">
                             <div className="col-lg-12">
                                 <h2 className='text-center mb-4'>Room Type & Price</h2>
                                 <div className="table-div ">
                                     <table className='text-center'>
                                         <tbody>
-                                        <tr>
-                                            <th>Room Type</th>
-                                            <th>Sleeps</th>
-                                            <th>Price</th>
-                                        </tr>
-                                        {
-                                            roomDetails.map(index=><RoomTable
-                                                index = {index}
-                                            ></RoomTable>)
-                                        }
+                                            <tr>
+                                                <th>Room Type</th>
+                                                <th>Sleeps</th>
+                                                <th>Price</th>
+                                            </tr>
+                                            {
+                                                roomDetails.map(index => <RoomTable
+                                                    index={index}
+                                                ></RoomTable>)
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
@@ -66,7 +73,7 @@ const SingleHotelDetail = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

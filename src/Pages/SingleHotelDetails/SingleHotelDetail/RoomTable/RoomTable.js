@@ -7,8 +7,8 @@ const RoomTable = (props) => {
     return (
         <tr>
             {
-                tr.map(index=><RoomTableTr index = {index}></RoomTableTr>)
-            }
+                tr.map(index=><RoomTableTr index = {index}></RoomTableTr> )
+            }            
         </tr>
     );
 };

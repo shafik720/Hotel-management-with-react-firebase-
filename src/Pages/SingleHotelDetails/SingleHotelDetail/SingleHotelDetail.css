@@ -27,8 +27,8 @@
 /* table css */
 .table-div table{
     width: 100%;    
-    border: 2px solid #183153;
     border-radius: 5px;
+    border-collapse: collapse;
 }
 .table-div table tr th, .table-div table tr td {
     /* border-top: 2px solid #183153;
@@ -39,8 +39,10 @@
 .table-div td {
     font-weight: 700;
     font-size: 18px;
+    border: 1px solid #183153;
 }
 .table-div th{
     font-size: 22px;
     font-weight: 800;
+    border: 2px solid #183153;
 }

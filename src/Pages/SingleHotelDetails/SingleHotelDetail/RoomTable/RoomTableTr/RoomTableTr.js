@@ -43,7 +43,7 @@ const RoomTableTr = (props) => {
     }
     return (
         <td>
-            {td}                        
+            {td}               
         </td>
     );
 };

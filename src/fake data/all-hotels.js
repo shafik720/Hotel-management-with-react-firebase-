@@ -16,15 +16,15 @@ let allHotels = [
         beachFront : 'yes',
         stars : 4,
         rooms : [
-            ['Executive Single Room', '1', '2000'],            
-            ['Premium Single Room', '1', '2200'], 
-            ['Regular Double Room', '2', '2500'],
-            ['Superior Twin', '2.1', '3000'],
-            ['Executive Double Room', '2.2', '3300'],
-            ['Regular Couple Room', '2.5', '2500'],
-            ['Reegular Family Room', '5', '3200'],
-            ['Executive Family Room', '5.1', '3500'],
-            ['Presidential Room', '8', '5000']
+            ['Executive Single Room', '1', '2000/-'],            
+            ['Premium Single Room', '1', '2200/-'], 
+            ['Regular Double Room', '2', '2500/-'],
+            ['Superior Twin', '2.1', '3000/-'],
+            ['Executive Double Room', '2.2', '3300/-'],
+            ['Regular Couple Room', '2.5', '2500/-'],
+            ['Regular Family Room', '5', '3200/-'],
+            ['Executive Family Room', '5.1', '3500/-'],
+            ['Presidential Room', '8', '5000/-']
         ],
         fitnessCenter: 'yes',
         thumbImg : 'https://i.ibb.co/WK2LjKn/long-beach.jpg'
