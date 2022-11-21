@@ -16,8 +16,8 @@ const SingleHotelDetail = (props) => {
                             <div className="col-lg-6">
                                 <div className="">
                                     <div className="singleHotel-desc-left">
-                                        <p>Ratings : <span className='darkRed-text'>{ratings}</span> </p>
-                                        <p>Price : <span className='darkRed-text'>{price}</span>  </p>
+                                        {/* <p>Ratings : <span className='darkRed-text'>{ratings}</span> </p>
+                                        <p>Price : <span className='darkRed-text'>{price}</span>  </p> */}
                                         <p> <span className='iconBox'><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon></span> Fitness Center : {fitnessCenter} </p>
                                         <p><span className='iconBox'><FontAwesomeIcon icon={faUmbrellaBeach}></FontAwesomeIcon></span>Beach Front : {beachFront} </p>
                                         <p><span className='iconBox'><FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon></span> Restaurant : {restaurant} </p>
