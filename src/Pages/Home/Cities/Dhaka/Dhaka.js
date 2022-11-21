@@ -4,7 +4,6 @@ import HotelDisplay from '../HotelDisplay/HotelDisplay';
 
 const Dhaka = () => {
     let[hotels, setHotels] = useHotels();
-    // console.log(hotels);
     return (
         <div>
             <h2 className='text-center mt-5'>Hotels In Dhaka</h2>

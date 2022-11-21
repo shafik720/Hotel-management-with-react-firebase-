@@ -15,6 +15,11 @@ let allHotels = [
         swimmingPool : 'Yes',
         beachFront : 'yes',
         stars : 4,
+        rooms : [
+            ['Superior Twin', '3', '3500'],
+            ['Premium Double Room', '2', '2500'],
+            ['Premium Single Room', '1', '100'] 
+        ],
         fitnessCenter: 'yes',
         thumbImg : 'https://i.ibb.co/WK2LjKn/long-beach.jpg'
     },

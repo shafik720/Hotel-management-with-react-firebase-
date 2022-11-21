@@ -8,13 +8,14 @@ const SingleHotelDetails = () => {
     let param = useParams();
     let hotelId = param.hotelId;
     let[hotels, setHotels] = useHotels();
-    // console.log(hotelId);
     let foundedHotel = hotels.find(index=>index.id == hotelId);
-    console.log(foundedHotel);
     return (
         <div>
             {
-                hotels.map(index=> index.id == hotelId && <SingleHotelDetail index={index}></SingleHotelDetail>)
+                hotels.map(index=> index.id == hotelId && <SingleHotelDetail 
+                    index={index}
+                    key= {index.id}
+                    ></SingleHotelDetail>)
             }
         </div>
     );

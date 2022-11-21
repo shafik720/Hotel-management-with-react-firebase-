@@ -2,10 +2,16 @@ import React from 'react';
 import './SingleHotelDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faUmbrellaBeach, faUtensils, faPersonSwimming, faWifi, faCar, faChampagneGlasses, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
+import RoomTable from './RoomTable/RoomTable';
 
 
 const SingleHotelDetail = (props) => {
     let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
+    let roomDetails = props.index.rooms;
+    // console.log(roomDetails);
+    // for(let element in roomDetails){
+    //     // console.log(element)
+    // }
     return (
         <div className='container'>
             <div className="row">
@@ -42,12 +48,18 @@ const SingleHotelDetail = (props) => {
                                 <h2 className='text-center mb-4'>Room Type & Price</h2>
                                 <div className="table-div ">
                                     <table className='text-center'>
+                                        <tbody>
                                         <tr>
                                             <th>Room Type</th>
                                             <th>Sleeps</th>
                                             <th>Price</th>
                                         </tr>
-                                        <tr>
+                                        {
+                                            roomDetails.map(index=><RoomTable
+                                                index = {index}
+                                            ></RoomTable>)
+                                        }
+                                        {/* <tr>
                                             <td>Double Room</td>
                                             <td>Double</td>
                                             <td>Price : 750</td>
@@ -56,7 +68,8 @@ const SingleHotelDetail = (props) => {
                                             <td>Single Room</td>
                                             <td>Single</td>
                                             <td>Price : 550</td>
-                                        </tr>
+                                        </tr> */}
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
