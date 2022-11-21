@@ -16,10 +16,10 @@ let allHotels = [
         beachFront : 'yes',
         stars : 4,
         rooms : [
-            ['Superior Twin', '3', '3500'],
+            ['Executive Single Room', '1', '2000'],
+            ['Superior Twin', '2.1', '3500'],
             ['Premium Double Room', '2', '2500'],
             ['Executive Double Room', '3', '3200'],
-            ['Executive Single Room', '1', '2000'],
             ['Presidential Room', '2', '4000'],
             ['Premium Single Room', '1', '100'] 
         ],
