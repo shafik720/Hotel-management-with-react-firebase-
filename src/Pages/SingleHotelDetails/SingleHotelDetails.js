@@ -4,10 +4,10 @@ import './SingleHotelDetails.css'
 
 const SingleHotelDetails = () => {
     let param = useParams();
-    
+    let hotelId = param.hotelId;
     return (
         <div>
-            <h2>Single Hotel Details here : {param.hotelId} </h2>
+            <h2>Single Hotel Details here : {hotelId} </h2>
         </div>
     );
 };
