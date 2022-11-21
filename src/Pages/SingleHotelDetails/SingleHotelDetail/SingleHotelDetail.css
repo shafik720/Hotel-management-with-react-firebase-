@@ -1,10 +1,7 @@
 
 
-.singleHotel-details{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.singleHotel-details p{
+
+.singleHotel-desc p{
     font-weight: 600;
     font-size: 18px;
 }
