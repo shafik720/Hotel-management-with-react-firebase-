@@ -75,8 +75,8 @@ const SingleHotelDetail = (props) => {
                     </div>
                 </div>
             </div> */}
-            <div className="row px-1">
-            <div className=" col-lg-12 table table-header px-1">
+            <div className="row px-2">
+            <div className=" col-lg-12 table table-header ">
                         <h2>Room Type</h2>
                         <h2>Sleeps</h2>
                         <h2>Price</h2>

@@ -5,7 +5,7 @@ import './SingleHotel.css';
 const SingleHotel = (props) => {
     console.log(props.index);
     return (
-        <div className='row table-parent px-1'>            
+        <div className='row table-parent'>            
             <div className="col-lg-12 table fw-bold fw-bolder ">
             {
                 props.index.map(index=><Hotel index={index}></Hotel>)
