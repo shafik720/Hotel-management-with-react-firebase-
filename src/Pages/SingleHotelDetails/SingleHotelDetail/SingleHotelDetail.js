@@ -8,7 +8,7 @@ import SingleHotel from './SingleHotel/SingleHotel';
 
 const SingleHotelDetail = (props) => {
     let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
-    let roomDetails = props.index.rooms;
+    let roomDetails = props?.index?.rooms;
     // console.log(roomDetails);
     // for(let element of roomDetails){
     //     console.log(element)
@@ -85,7 +85,7 @@ const SingleHotelDetail = (props) => {
                 <div className="col-lg-12">                    
                     <div className="">
                         {
-                            roomDetails.map(index => <SingleHotel
+                            roomDetails && roomDetails?.map(index => <SingleHotel
                                 index={index}
                             ></SingleHotel>)
                         }

@@ -44,6 +44,14 @@ let allHotels = [
         swimmingPool : 'no',
         beachFront : 'yes',
         stars : 3,
+        rooms : [
+            ['Executive Single Room', '1', '2000/-'], 
+            ['Regular Double Room', '2', '2500/-'],
+            ['Superior Twin', '2.1', '3000/-'],
+            ['Regular Couple Room', '2.5', '2500/-'],
+            ['Regular Family Room', '5', '3200/-'],
+            ['Executive Family Room', '5.1', '3500/-']
+        ],
         fitnessCenter: 'no',
         thumbImg : 'https://i.ibb.co/yYc2MQs/sea-crown.jpg'
     },
@@ -62,6 +70,12 @@ let allHotels = [
         swimmingPool : 'no',
         beachFront : 'no',
         stars : 0,
+        rooms : [
+            ['Executive Single Room', '1', '700/-'], 
+            ['Regular Double Room', '2', '1200/-'],
+            ['Executive Double Room', '2.2', '1500/-'],
+            ['Regular Family Room', '5', '2200/-']
+        ],
         fitnessCenter: 'no',
         thumbImg : 'https://i.ibb.co/PNkMDGn/sea-shine.jpg'
     },
