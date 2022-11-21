@@ -4,4 +4,18 @@
 .singleHotel-desc p{
     font-weight: 600;
     font-size: 18px;
+    display: flex;    
+    align-items: center;
+}
+.singleHotel-desc .iconBox{
+    border: 2px solid #183153 ;
+    display: block;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 2px;
+    color: #183153;
 }
