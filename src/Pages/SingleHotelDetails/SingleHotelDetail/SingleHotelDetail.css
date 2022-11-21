@@ -1,8 +1,12 @@
 
 
 
+.single-hotel-div h2{
+    font-size: 35px;
+    font-weight: 800;
+}
 .singleHotel-desc p{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 18px;
     display: flex;    
     align-items: center;
@@ -19,3 +23,5 @@
     border-radius: 2px;
     color: #183153;
 }
+
+/* table css */
