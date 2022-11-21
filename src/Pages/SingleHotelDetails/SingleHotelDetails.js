@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useHotels from '../../Hooks/useHotels';
+import SingleHotelDetail from './SingleHotelDetail/SingleHotelDetail';
 import './SingleHotelDetails.css'
 
 const SingleHotelDetails = () => {
@@ -12,7 +13,9 @@ const SingleHotelDetails = () => {
     console.log(foundedHotel);
     return (
         <div>
-            <h2>Single Hotel Details here : {foundedHotel?.hotelName} </h2>
+            {
+                hotels.map(index=> index.id == hotelId && <SingleHotelDetail index={index}></SingleHotelDetail>)
+            }
         </div>
     );
 };
