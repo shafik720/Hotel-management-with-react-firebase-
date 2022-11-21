@@ -2,12 +2,16 @@ import React from 'react';
 import './HotelDisplay.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 
 const HotelDisplay = (props) => {
     let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
+
+    let navigate = useNavigate();
     function goToSingleHotel(element){
-        console.log(element);
+        let path = `/cities/${element}`;
+        navigate(path);
     }
     return (
         <div className='col-lg-4 col-md-6'>
