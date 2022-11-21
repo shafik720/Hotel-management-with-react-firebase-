@@ -3,7 +3,7 @@ import Hotel from './Hotel/Hotel';
 import './SingleHotel.css';
 
 const SingleHotel = (props) => {
-    console.log(props.index);
+    // console.log(props.index);
     return (
         <div className='row table-parent'>            
             <div className="col-lg-12 table fw-bold fw-bolder ">
