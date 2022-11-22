@@ -11,9 +11,11 @@ function addToDb(element){
 }
 
 function getFromDb(){
-    
+    let hotelDb = JSON.parse(localStorage.getItem('hotels') || '{}');
+    return hotelDb;
 }
 
 export{
-    addToDb
+    addToDb,
+    getFromDb
 }
