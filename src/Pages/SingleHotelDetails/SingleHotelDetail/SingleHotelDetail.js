@@ -9,10 +9,6 @@ import SingleHotel from './SingleHotel/SingleHotel';
 const SingleHotelDetail = (props) => {
     let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
     let roomDetails = props?.index?.rooms;
-    // console.log(roomDetails);
-    // for(let element of roomDetails){
-    //     console.log(element)
-    // }
     return (
         <div className='container'>
             <div className="row">
