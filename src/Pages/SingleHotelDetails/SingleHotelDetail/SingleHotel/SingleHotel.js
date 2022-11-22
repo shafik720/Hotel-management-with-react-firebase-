@@ -3,14 +3,16 @@ import Hotel from './Hotel/Hotel';
 import './SingleHotel.css';
 
 const SingleHotel = (props) => {
-    // console.log(props.index);
+    function handleBookButton(element){
+        console.log(element);
+    }
     return (
         <div className='row table-parent'>            
             <div className="col-lg-12 table fw-bold fw-bolder ">
             {
                 props.index.map(index=><Hotel index={index}></Hotel>)
             }    
-            <button>Book Now</button>
+            <button onClick={()=>handleBookButton(props.index)}>Book Now</button>
             </div>            
         </div>
     );
