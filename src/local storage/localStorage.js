@@ -10,6 +10,9 @@ function addToDb(element){
     localStorage.setItem('hotels', JSON.stringify(hotelDb));
 }
 
+function getFromDb(){
+    
+}
 
 export{
     addToDb
