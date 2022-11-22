@@ -2,7 +2,6 @@ import React from 'react';
 import './SingleHotelDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faUmbrellaBeach, faUtensils, faPersonSwimming, faWifi, faCar, faChampagneGlasses, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
-import RoomTable from './RoomTable/RoomTable';
 import SingleHotel from './SingleHotel/SingleHotel';
 
 

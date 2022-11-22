@@ -6,6 +6,7 @@ import './SingleHotel.css';
 const SingleHotel = (props) => {
     function handleBookButton(element){
         addToDb(element);
+        console.log(element);
     }
     
     return (
