@@ -9,7 +9,7 @@ const Hotel = (props) => {
     let double = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> <FontAwesomeIcon icon={faUser} /> </span>;
     let superiorTwin = <span className='bedIcon'><FontAwesomeIcon icon={faRestroom} /> + <FontAwesomeIcon icon={faBaby} /></span> ;
     let coupleRoom = <span className='bedIcon'><FontAwesomeIcon icon={faRestroom} /> </span>;
-    let three = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> <FontAwesomeIcon icon={faUser} /> +  <FontAwesomeIcon icon={faUser} /></span> ;    
+    let three = <span className='bedIcon'><FontAwesomeIcon icon={faUsersLine} /> </span> ;    
     let family = <span className='bedIcon'><FontAwesomeIcon icon={faUsersLine} /> </span>;
     let familyExecutive = <span className='bedIcon'><FontAwesomeIcon icon={faPeopleRoof} /> </span>;;
     let presidential = <span className='bedIcon'><FontAwesomeIcon icon={faUserTie} /> </span>;
