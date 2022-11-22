@@ -29,6 +29,7 @@ function App() {
         <Route path='/dhaka' element={<Dhaka></Dhaka>}></Route>
         <Route path='/kuakata' element={<Kuakata></Kuakata>}></Route>
         <Route path='/ctg' element={<Ctg></Ctg>}></Route>
+        {/* <Route path='/bookings' element={}></Route> */}
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
     </div>
