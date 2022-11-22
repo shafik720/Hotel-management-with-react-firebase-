@@ -1,10 +1,11 @@
 import React from 'react';
+import { addToDb } from '../../../../local storage/localStorage';
 import Hotel from './Hotel/Hotel';
 import './SingleHotel.css';
 
 const SingleHotel = (props) => {
     function handleBookButton(element){
-        console.log(element);
+        addToDb(element);
     }
     return (
         <div className='row table-parent'>            
