@@ -76,12 +76,13 @@ const SingleHotelDetail = (props) => {
                 </div>
             </div> */}
             <div className="row px-2">
-            <div className=" col-lg-12 table table-header ">
+                {roomDetails ?  <div className=" col-lg-12 table table-header ">
                         <h2>Room Type</h2>
                         <h2>Sleeps</h2>
                         <h2>Price</h2>
                         <h2 className='text-center'>Book</h2>
-                    </div>
+                    </div> : <h2>Room Details Currently Not Available</h2>}
+            
                 <div className="col-lg-12">                    
                     <div className="">
                         {
