@@ -81,7 +81,7 @@ const SingleHotelDetail = (props) => {
                         <h2>Sleeps</h2>
                         <h2>Price</h2>
                         <h2 className='text-center'>Book</h2>
-                    </div> : <h2>Room Details Currently Not Available</h2>}
+                    </div> : <h2 className='text-center text-danger fw-bolder'>Room Details Currently Not Available !</h2>}
             
                 <div className="col-lg-12">                    
                     <div className="">
