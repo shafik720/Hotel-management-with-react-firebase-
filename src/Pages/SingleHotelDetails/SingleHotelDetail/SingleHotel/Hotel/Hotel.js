@@ -7,7 +7,7 @@ const Hotel = (props) => {
     //------------- making icons for showing bed quantity in the table area for every specific hotels
     let executiveSingleRoom = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> </span>;
     let double = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> <FontAwesomeIcon icon={faUser} /> </span>;
-    let superiorTwin = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> <FontAwesomeIcon icon={faUser} /> + <FontAwesomeIcon icon={faBaby} /></span> ;
+    let superiorTwin = <span className='bedIcon'><FontAwesomeIcon icon={faRestroom} /> + <FontAwesomeIcon icon={faBaby} /></span> ;
     let coupleRoom = <span className='bedIcon'><FontAwesomeIcon icon={faRestroom} /> </span>;
     let three = <span className='bedIcon'><FontAwesomeIcon icon={faUser} /> <FontAwesomeIcon icon={faUser} /> +  <FontAwesomeIcon icon={faUser} /></span> ;    
     let family = <span className='bedIcon'><FontAwesomeIcon icon={faUsersLine} /> </span>;
