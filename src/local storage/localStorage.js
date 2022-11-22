@@ -1,12 +1,9 @@
 
 
+
 function addToDb(element){
-    let hotelDb = JSON.parse(localStorage.getItem('hotels') || '{}');
-    if(hotelDb[element]){
-        hotelDb[element] = hotelDb[element] + 1;        
-    }else{
-        hotelDb[element] = 1 ;
-    }
+    let hotelDb = JSON.parse(localStorage.getItem('hotels') || '[]');
+    hotelDb.push(element)    ;
     localStorage.setItem('hotels', JSON.stringify(hotelDb));
 }
 
