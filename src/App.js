@@ -14,6 +14,7 @@ import Kuakata from './Pages/Home/Cities/Kuakata/Kuakata';
 import Cities from './Pages/Home/Cities/Cities';
 import SingleHotelDetails from './Pages/SingleHotelDetails/SingleHotelDetails';
 import Bookings from './Pages/Bookings/Bookings';
+import Signup from './Pages/Signup/Signup';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path='/dhaka' element={<Dhaka></Dhaka>}></Route>
         <Route path='/kuakata' element={<Kuakata></Kuakata>}></Route>
         <Route path='/ctg' element={<Ctg></Ctg>}></Route>
+        <Route path='/signup' element={<Signup></Signup>}></Route>
         <Route path='/bookings' element={<Bookings></Bookings>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
