@@ -2,17 +2,12 @@ import React from 'react';
 import './SingleHotelDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faUmbrellaBeach, faUtensils, faPersonSwimming, faWifi, faCar, faChampagneGlasses, faPlaneDeparture } from '@fortawesome/free-solid-svg-icons';
-import RoomTable from './RoomTable/RoomTable';
 import SingleHotel from './SingleHotel/SingleHotel';
 
 
 const SingleHotelDetail = (props) => {
     let { id, thumbImg, swimmingPool, stars, restaurant, ratings, price, hotelName, freeWifi, freeParking, fitnessCenter, city, beachFront, bar, airportShuttle } = props.index;
     let roomDetails = props?.index?.rooms;
-    // console.log(roomDetails);
-    // for(let element of roomDetails){
-    //     console.log(element)
-    // }
     return (
         <div className='container'>
             <div className="row">
@@ -23,8 +18,7 @@ const SingleHotelDetail = (props) => {
                             <div className="col-lg-6 col-md-6">
                                 <div className=" ">
                                     <div className="singleHotel-desc-left">
-                                        {/* <p>Ratings : <span className='darkRed-text'>{ratings}</span> </p>
-                                        <p>Price : <span className='darkRed-text'>{price}</span>  </p> */}
+                                        
                                         <p> <span className='iconBox'><FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon></span> Fitness Center : {fitnessCenter} </p>
                                         <p><span className='iconBox'><FontAwesomeIcon icon={faUmbrellaBeach}></FontAwesomeIcon></span>Beach Front : {beachFront} </p>
                                         <p><span className='iconBox'><FontAwesomeIcon icon={faUtensils}></FontAwesomeIcon></span> Restaurant : {restaurant} </p>
@@ -45,36 +39,8 @@ const SingleHotelDetail = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            {/*------------------ table for every single hotels with hotel details -------------- */}
-            {/* <div className="row">
-                <div className="col-lg-12">
-                    <div className="">
-                        <div className="row my-5">
-                            <div className="col-lg-12">
-                                <h2 className='text-center mb-4'>Room Type & Price</h2>
-                                <div className="table-div ">
-                                    <table className='text-center'>
-                                        <tbody>
-                                            <tr>
-                                                <th>Room Type</th>
-                                                <th>Sleeps</th>
-                                                <th>Price</th>
-                                            </tr>
-                                            {
-                                                roomDetails.map(index => <RoomTable
-                                                    index={index}
-                                                ></RoomTable>)
-                                            }
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+            </div>            
+            
             <div className="row px-2">
                 {roomDetails ?  <div className=" col-lg-12 table table-header ">
                         <h2>Room Type</h2>
