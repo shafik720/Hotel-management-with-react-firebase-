@@ -11,16 +11,16 @@ const Login = () => {
                         <div className=" form-div ">
                             <h2 style={{ color: 'red' }}>Sign Up</h2>
                             <hr style={{ marginBottom: "40px" }} />
-                            <form action="" onSubmit={handleSubmit}>
-                                <div onBlur={handleEmail} className="email-field">
+                            <form action="" >
+                                <div  className="email-field">
                                     <p>Email :</p>
                                     <input type="email" name="" id="" />
                                 </div>
-                                <div onBlur={handlePassword} className="password-field">
+                                <div  className="password-field">
                                     <p>Password :</p>
                                     <input type="password" name="" id="" />
                                 </div>
-                                <div onBlur={handleConfirmPassword} className="password-field">
+                                <div  className="password-field">
                                     <p>Confirm Password :</p>
                                     <input type="password" name="" id="" />
                                 </div>
