@@ -15,6 +15,7 @@ import Cities from './Pages/Home/Cities/Cities';
 import SingleHotelDetails from './Pages/SingleHotelDetails/SingleHotelDetails';
 import Bookings from './Pages/Bookings/Bookings';
 import Signup from './Pages/Signup/Signup';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
         <Route path='/kuakata' element={<Kuakata></Kuakata>}></Route>
         <Route path='/ctg' element={<Ctg></Ctg>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
-        <Route path='/bookings' element={<Bookings></Bookings>}></Route>
+        <Route path='/bookings' element={<RequireAuth><Bookings></Bookings></RequireAuth>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
     </div>
