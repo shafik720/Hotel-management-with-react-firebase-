@@ -5,11 +5,11 @@
     display: grid;
     grid-template-columns:  repeat(4 , 1fr);
     align-items: center;
-    border: 3px solid #183153;
+    border: 2px solid #ccc;
     column-gap: 20px;
     padding: 10px 10px;
     border-radius: 5px;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 0 5px 5px 0px rgba(0,0,0,0.5); */
 }
 .table h2{
     font-size: 22px;
