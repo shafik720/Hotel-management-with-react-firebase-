@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Signup.css';
 import googleLogo from '../../google.svg';
 
 const Signup = () => {
+    let [email, setEmail] = useState('');
+    let [password, setPassword] = useState('');
+    let [repassword, setRepassword] = useState('');
+
+    function handleEmail(e){
+        setEmail(e.target.value);
+    }
     function handleSubmit(e){
         e.preventDefault();
     }
@@ -18,7 +25,7 @@ const Signup = () => {
                             <form action="" >
                                 <div  className="email-field">
                                     <p>Email :</p>
-                                    <input type="email" name="" id="" />
+                                    <input onBlur={handleEmail} type="email" name="" id="" />
                                 </div>
                                 <div  className="password-field">
                                     <p>Password :</p>
