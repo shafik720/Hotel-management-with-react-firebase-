@@ -2,8 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
+import auth from '../../firebase.init';
+import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
 
 const Login = () => {
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
     return (
         <div>
             <div className="container my-3">
