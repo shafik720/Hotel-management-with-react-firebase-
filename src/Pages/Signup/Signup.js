@@ -6,13 +6,24 @@ import googleLogo from '../../google.svg';
 const Signup = () => {
     let [email, setEmail] = useState('');
     let [password, setPassword] = useState('');
+    let [error, setError] = useState('');
     let [repassword, setRepassword] = useState('');
 
     function handleEmail(e){
         setEmail(e.target.value);
     }
+    function handlePassword(e){
+        setPassword(e.target.value);
+    }
+    function handleRepassword(e){
+        setRepassword(e.target.value);
+    }
     function handleSubmit(e){
         e.preventDefault();
+        if(password.length<6){
+            setError('Password must be more than 6 character length');
+            return;
+        }
     }
     return (
         <div>
