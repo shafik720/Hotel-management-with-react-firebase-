@@ -45,6 +45,9 @@ const Header = () => {
     // --------------- implementing Log Out options
     const [signOut] = useSignOut(auth);    
     const [user, loading, error] = useAuthState(auth);
+    function handleLogout(){
+        signOut();
+    }
 
     return (
         <div className='header-parent'>
@@ -67,8 +70,8 @@ const Header = () => {
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/cities'>Cities</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/bookings'>Your Bookings</NavLink>
+                            {user ? <a onClick={handleLogout} href="">Log Out</a> : <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>}
                             
-                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
                         </nav>
                     </div>
                 </div>
