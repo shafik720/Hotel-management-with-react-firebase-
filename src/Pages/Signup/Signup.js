@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
 import googleLogo from '../../google.svg';
 import auth from '../../firebase.init';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const Signup = () => {
     let [email, setEmail] = useState('');
@@ -32,11 +32,12 @@ const Signup = () => {
             return;
         }
         setError('');
+        //---------------------------- sign in with email and password functionality
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
-                if(user){
+                if (user) {
                     navigation('/');
                 }
             })
@@ -45,8 +46,33 @@ const Signup = () => {
                 const errorMessage = error.message;
                 setError(errorMessage);
             });
-            
+
     }
+    //------------------ sign in with google functionality
+    const provider = new GoogleAuthProvider();
+    function handleGoogleSignIn() {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // The signed-in user info.
+                const user = result.user;
+                if (user) {
+                    navigation('/');
+                }
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+                setError(errorMessage);
+            });
+    }
+
     return (
         <div>
             <div className="container my-5">
@@ -74,7 +100,7 @@ const Signup = () => {
                                 <button className="sign-up-button" type='submit'>Sign Up</button>
                                 <p className="signUpText">Already Have an Account ? <Link to="/login">Log in Here</Link> </p>
                                 <h4>Or</h4>
-                                <div draggable className="googleButton">
+                                <div onClick={handleGoogleSignIn} draggable className="googleButton">
                                     <img src={googleLogo} alt="" />
                                     <h4>Sign in Using Google</h4>
                                 </div>
