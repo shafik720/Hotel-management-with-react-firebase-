@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
 import auth from '../../firebase.init';
-import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
+import {useAuthState, useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
 
 const Login = () => {
     let [email, setEmail] = useState('');
@@ -19,11 +19,15 @@ const Login = () => {
     function handleSubmit(e){
         e.preventDefault();
     }
+
+    // --------- authentication using firebase hooks
+    const [user, loading, error] = useAuthState(auth);
+      const navigate = useNavigate();
+      if (user) {
+        navigate('/');
+      }
     const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
+        signInWithEmailAndPassword,        
       ] = useSignInWithEmailAndPassword(auth);
     return (
         <div>
@@ -43,7 +47,7 @@ const Login = () => {
                                     <input onBlur={handlePassword}  type="password" name="" id="" />
                                 </div>
                                 <div className="text-center error-area">
-                                    
+                                    {error ? <p>{error}</p> : '' }
                                 </div>
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
