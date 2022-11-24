@@ -1,34 +1,51 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css';
 import googleLogo from '../../google.svg';
+import auth from '../../firebase.init';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const Signup = () => {
     let [email, setEmail] = useState('');
     let [password, setPassword] = useState('');
     let [error, setError] = useState('');
     let [repassword, setRepassword] = useState('');
+    let navigation = useNavigate();
 
-    function handleEmail(e){
+    function handleEmail(e) {
         setEmail(e.target.value);
     }
-    function handlePassword(e){
+    function handlePassword(e) {
         setPassword(e.target.value);
     }
-    function handleRepassword(e){
+    function handleRepassword(e) {
         setRepassword(e.target.value);
     }
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault();
-        if(password.length<6){
+        if (password.length < 6) {
             setError('Password must be more than 6 character length');
             return;
         }
-        if(password !== repassword){
+        if (password !== repassword) {
             setError('Password is not matched ');
             return;
         }
         setError('');
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                if(user){
+                    navigation('/');
+                }
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                setError(errorMessage);
+            });
+            
     }
     return (
         <div>
@@ -39,15 +56,15 @@ const Signup = () => {
                             <h2 style={{ color: 'red' }}>Sign Up</h2>
                             <hr style={{ marginBottom: "40px" }} />
                             <form action="" onSubmit={handleSubmit} >
-                                <div  className="email-field">
+                                <div className="email-field">
                                     <p>Email :</p>
-                                    <input onBlur={handleEmail} type="email" name=""  />
+                                    <input onBlur={handleEmail} type="email" name="" />
                                 </div>
-                                <div  className="password-field">
+                                <div className="password-field">
                                     <p>Password :</p>
                                     <input onBlur={handlePassword} type="password" name="" />
                                 </div>
-                                <div  className="password-field">
+                                <div className="password-field">
                                     <p>Confirm Password :</p>
                                     <input onBlur={handleRepassword} type="password" name="" />
                                 </div>
