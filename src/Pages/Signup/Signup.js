@@ -4,6 +4,9 @@ import './Signup.css';
 import googleLogo from '../../google.svg';
 
 const Signup = () => {
+    function handleSubmit(e){
+        e.preventDefault();
+    }
     return (
         <div>
             <div className="container my-5">
@@ -28,7 +31,7 @@ const Signup = () => {
                                 <div className="text-center error-area">
                                     
                                 </div>
-                                <button className="sign-up-button" type='submit'>Sign Up</button>
+                                <button onClick={handleSubmit} className="sign-up-button" type='submit'>Sign Up</button>
                                 <p className="signUpText">Already Have an Account ? <Link to="/login">Log in Here</Link> </p>
                                 <h4>Or</h4>
                                 <div draggable className="googleButton">
