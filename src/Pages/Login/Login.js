@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
@@ -6,6 +6,19 @@ import auth from '../../firebase.init';
 import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
 
 const Login = () => {
+    let [email, setEmail] = useState('');
+    let [password, setPassword] = useState('');
+    let [errors, setErrors] = useState('');
+
+    function handleEmail(e) {
+        setEmail(e.target.value);
+    }
+    function handlePassword(e) {
+        setPassword(e.target.value);
+    }
+    function handleSubmit(e){
+        e.preventDefault();
+    }
     const [
         signInWithEmailAndPassword,
         user,
@@ -20,14 +33,14 @@ const Login = () => {
                         <div className=" form-div ">
                             <h2>Log In</h2>
                             <hr style={{ marginBottom: "40px" }} />
-                            <form action="" >
+                            <form action=""  onSubmit={handleSubmit}>
                                 <div className="email-field">
                                     <p>Email :</p>
-                                    <input  type="email" name="" id="" />
+                                    <input onBlur={handleEmail}  type="email" name="" id="" />
                                 </div>
                                 <div className="password-field">
                                     <p>Password :</p>
-                                    <input  type="password" name="" id="" />
+                                    <input onBlur={handlePassword}  type="password" name="" id="" />
                                 </div>
                                 <div className="text-center error-area">
                                     
