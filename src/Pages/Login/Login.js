@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
 import auth from '../../firebase.init';
-import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
@@ -20,10 +20,10 @@ const Login = () => {
 
 
     // --------- authentication using firebase hooks -------------------------
-    // const [user, loading, error] = useAuthState(auth);
     const navigate = useNavigate();
+    
+    const [user] = useAuthState(auth);
     const [signInWithEmailAndPassword,
-        user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
@@ -32,6 +32,14 @@ const Login = () => {
         e.preventDefault();        
         signInWithEmailAndPassword(email, password);
         return;
+    }
+
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    function handleGoogleSignIn(){
+        signInWithGoogle();
+        if (user) {
+            navigate('/');
+        }
     }
     if (user) {
         navigate('/');
@@ -64,7 +72,7 @@ const Login = () => {
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
                                 <h4>Or</h4>
-                                <div draggable className="googleButton">
+                                <div onClick={handleGoogleSignIn} draggable className="googleButton">
                                     <img src={googleLogo} alt="" />
                                     <h4>Sign in Using Google</h4>
                                 </div>
