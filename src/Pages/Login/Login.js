@@ -16,19 +16,26 @@ const Login = () => {
     function handlePassword(e) {
         setPassword(e.target.value);
     }
-    function handleSubmit(e){
-        e.preventDefault();
-    }
+    
 
-    // --------- authentication using firebase hooks
+    // --------- authentication using firebase hooks -------------------------
     const [user, loading, error] = useAuthState(auth);
-      const navigate = useNavigate();
-      if (user) {
-        navigate('/');
-      }
+      const navigate = useNavigate();      
     const [
         signInWithEmailAndPassword,        
       ] = useSignInWithEmailAndPassword(auth);
+
+      function handleSubmit(e){
+        e.preventDefault();
+        if (error) {
+            console.log(error);
+            return ;
+          }        
+        return signInWithEmailAndPassword(email, password);
+    }
+    if (user) {
+        navigate('/');
+      }
     return (
         <div>
             <div className="container my-3">
@@ -40,14 +47,14 @@ const Login = () => {
                             <form action=""  onSubmit={handleSubmit}>
                                 <div className="email-field">
                                     <p>Email :</p>
-                                    <input onBlur={handleEmail}  type="email" name="" id="" />
+                                    <input onBlur={handleEmail}  type="email" name=""  />
                                 </div>
                                 <div className="password-field">
                                     <p>Password :</p>
-                                    <input onBlur={handlePassword}  type="password" name="" id="" />
+                                    <input onBlur={handlePassword}  type="password" name=""  />
                                 </div>
                                 <div className="text-center error-area">
-                                    {error ? <p>{error}</p> : '' }
+                                    <p>{error ? error.message : '' }</p>
                                 </div>
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
