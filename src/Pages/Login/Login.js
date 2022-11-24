@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
 import auth from '../../firebase.init';
@@ -39,11 +39,17 @@ const Login = () => {
         signInWithGoogle();
         if (user) {
             navigate('/');
+            navigate(from, { replace: true });
         }
     }
     if (user) {
         navigate('/');
     }
+    //----------------------------- working on protected route 
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+
     return (
         <div>
             <div className="container my-3">
