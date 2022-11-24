@@ -24,6 +24,11 @@ const Signup = () => {
             setError('Password must be more than 6 character length');
             return;
         }
+        if(password !== repassword){
+            setError('Password is not matched ');
+            return;
+        }
+        setError('');
     }
     return (
         <div>
@@ -33,23 +38,23 @@ const Signup = () => {
                         <div className=" form-div ">
                             <h2 style={{ color: 'red' }}>Sign Up</h2>
                             <hr style={{ marginBottom: "40px" }} />
-                            <form action="" >
+                            <form action="" onSubmit={handleSubmit} >
                                 <div  className="email-field">
                                     <p>Email :</p>
-                                    <input onBlur={handleEmail} type="email" name="" id="" />
+                                    <input onBlur={handleEmail} type="email" name=""  />
                                 </div>
                                 <div  className="password-field">
                                     <p>Password :</p>
-                                    <input type="password" name="" id="" />
+                                    <input onBlur={handlePassword} type="password" name="" />
                                 </div>
                                 <div  className="password-field">
                                     <p>Confirm Password :</p>
-                                    <input type="password" name="" id="" />
+                                    <input onBlur={handleRepassword} type="password" name="" />
                                 </div>
                                 <div className="text-center error-area">
-                                    
+                                    {error ? <p>{error}</p> : ''}
                                 </div>
-                                <button onClick={handleSubmit} className="sign-up-button" type='submit'>Sign Up</button>
+                                <button className="sign-up-button" type='submit'>Sign Up</button>
                                 <p className="signUpText">Already Have an Account ? <Link to="/login">Log in Here</Link> </p>
                                 <h4>Or</h4>
                                 <div draggable className="googleButton">
