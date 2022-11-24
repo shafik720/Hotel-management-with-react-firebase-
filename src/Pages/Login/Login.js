@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
 import auth from '../../firebase.init';
-import {useAuthState, useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
+import { useAuthState, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     let [email, setEmail] = useState('');
@@ -16,26 +17,25 @@ const Login = () => {
     function handlePassword(e) {
         setPassword(e.target.value);
     }
-    
+
 
     // --------- authentication using firebase hooks -------------------------
-    const [user, loading, error] = useAuthState(auth);
-      const navigate = useNavigate();      
-    const [
-        signInWithEmailAndPassword,        
-      ] = useSignInWithEmailAndPassword(auth);
+    // const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
+    const [signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
-      function handleSubmit(e){
-        e.preventDefault();
-        if (error) {
-            console.log(error);
-            return ;
-          }        
-        return signInWithEmailAndPassword(email, password);
+    function handleSubmit(e) {
+        e.preventDefault();        
+        signInWithEmailAndPassword(email, password);
+        return;
     }
     if (user) {
         navigate('/');
-      }
+    }
     return (
         <div>
             <div className="container my-3">
@@ -44,23 +44,28 @@ const Login = () => {
                         <div className=" form-div ">
                             <h2>Log In</h2>
                             <hr style={{ marginBottom: "40px" }} />
-                            <form action=""  onSubmit={handleSubmit}>
+                            <form action="" onSubmit={handleSubmit}>
                                 <div className="email-field">
                                     <p>Email :</p>
-                                    <input onBlur={handleEmail}  type="email" name=""  />
+                                    <input onBlur={handleEmail} type="email" name="" />
                                 </div>
                                 <div className="password-field">
                                     <p>Password :</p>
-                                    <input onBlur={handlePassword}  type="password" name=""  />
+                                    <input onBlur={handlePassword} type="password" name="" />
                                 </div>
                                 <div className="text-center error-area">
-                                    <p>{error ? error.message : '' }</p>
+                                    <p>{loading ?
+                                        <Spinner animation="border" variant="primary" />
+                                        :
+                                        ''
+                                    }</p>
+                                    <p>{error ? error.message : ''}</p>
                                 </div>
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
                                 <h4>Or</h4>
                                 <div draggable className="googleButton">
-                                    <img src={googleLogo}  alt="" />
+                                    <img src={googleLogo} alt="" />
                                     <h4>Sign in Using Google</h4>
                                 </div>
                             </form>
