@@ -22,10 +22,7 @@ const Login = () => {
     const navigate = useNavigate();
     
     const [user] = useAuthState(auth);
-    const [signInWithEmailAndPassword,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword,loading, error,] = useSignInWithEmailAndPassword(auth);
 
     function handleSubmit(e) {
         e.preventDefault();        
