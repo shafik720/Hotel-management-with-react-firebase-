@@ -1,9 +1,55 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import googleLogo from '../../google.svg';
+import auth from '../../firebase.init';
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
+import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
+    let [email, setEmail] = useState('');
+    let [password, setPassword] = useState('');
+    let [errors, setErrors] = useState('');
+
+    function handleEmail(e) {
+        setEmail(e.target.value);
+    }
+    function handlePassword(e) {
+        setPassword(e.target.value);
+    }
+
+
+    // --------- authentication using firebase hooks -------------------------
+    const navigate = useNavigate();
+    
+    const [user] = useAuthState(auth);
+    const [signInWithEmailAndPassword,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    function handleSubmit(e) {
+        e.preventDefault();        
+        signInWithEmailAndPassword(email, password);
+        return;
+    }
+
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    function handleGoogleSignIn(){
+        signInWithGoogle();
+        if (user) {
+            navigate('/');
+            navigate(from, { replace: true });
+        }
+    }
+    if (user) {
+        navigate('/');
+    }
+    //----------------------------- working on protected route 
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+
     return (
         <div>
             <div className="container my-3">
@@ -12,23 +58,28 @@ const Login = () => {
                         <div className=" form-div ">
                             <h2>Log In</h2>
                             <hr style={{ marginBottom: "40px" }} />
-                            <form action="" >
+                            <form action="" onSubmit={handleSubmit}>
                                 <div className="email-field">
                                     <p>Email :</p>
-                                    <input  type="email" name="" id="" />
+                                    <input onBlur={handleEmail} type="email" name="" />
                                 </div>
                                 <div className="password-field">
                                     <p>Password :</p>
-                                    <input  type="password" name="" id="" />
+                                    <input onBlur={handlePassword} type="password" name="" />
                                 </div>
                                 <div className="text-center error-area">
-                                    
+                                    <p>{loading ?
+                                        <Spinner animation="border" variant="primary" />
+                                        :
+                                        ''
+                                    }</p>
+                                    <p>{error ? error.message : ''}</p>
                                 </div>
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
                                 <h4>Or</h4>
-                                <div draggable className="googleButton">
-                                    <img src={googleLogo}  alt="" />
+                                <div onClick={handleGoogleSignIn} draggable className="googleButton">
+                                    <img src={googleLogo} alt="" />
                                     <h4>Sign in Using Google</h4>
                                 </div>
                             </form>

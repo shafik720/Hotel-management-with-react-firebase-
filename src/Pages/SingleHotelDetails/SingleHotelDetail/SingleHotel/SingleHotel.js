@@ -12,13 +12,12 @@ const SingleHotel = (props) => {
     return (
         <div className='row table-parent'>
             <div className="col-lg-12 table fw-bold fw-bolder ">
-
             {
                 props.index.map(index=> index.includes('#') || <Hotel index={index}></Hotel>)
             }    
             <button onClick={()=>handleBookButton(props.index)}>Book Now</button>
+            </div>            
 
-        </div>
         </div>
     );
 };

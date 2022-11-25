@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBed, faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 const Header = () => {
@@ -40,6 +42,13 @@ const Header = () => {
         }
     }
 
+    // --------------- implementing Log Out options
+    const [signOut] = useSignOut(auth);    
+    const [user, loading, error] = useAuthState(auth);
+    function handleLogout(){
+        signOut();
+    }
+
     return (
         <div className='header-parent'>
             <div className="header-div container">
@@ -61,7 +70,8 @@ const Header = () => {
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/contact'>Contact Us</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/cities'>Cities</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/bookings'>Your Bookings</NavLink>
-                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>
+                            {user ? <a onClick={handleLogout} href="">Log Out</a> : <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to='/login'>Login</NavLink>}
+                            
                         </nav>
                     </div>
                 </div>
