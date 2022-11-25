@@ -9,6 +9,7 @@ import { Spinner } from 'react-bootstrap';
 const Login = () => {
     let [email, setEmail] = useState('');
     let [password, setPassword] = useState('');
+    let [errors, setErrors] = useState('');
 
     function handleEmail(e) {
         setEmail(e.target.value);
@@ -22,7 +23,10 @@ const Login = () => {
     const navigate = useNavigate();
     
     const [user] = useAuthState(auth);
-    const [signInWithEmailAndPassword,loading, error,] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
     function handleSubmit(e) {
         e.preventDefault();        
@@ -30,6 +34,9 @@ const Login = () => {
         return;
     }
 
+    //----------------------------- working on protected route 
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const [signInWithGoogle] = useSignInWithGoogle(auth);
     function handleGoogleSignIn(){
         signInWithGoogle();
@@ -40,10 +47,9 @@ const Login = () => {
     }
     if (user) {
         navigate('/');
+        navigate(from, { replace: true });
     }
-    //----------------------------- working on protected route 
-    let location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    
 
 
     return (
