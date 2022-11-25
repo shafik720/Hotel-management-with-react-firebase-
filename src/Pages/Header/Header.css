@@ -1,7 +1,7 @@
 
 
 .header-parent{
-    background: linear-gradient(225deg, #2a2a2a,#007ACC);
+    background: linear-gradient(225deg, #2a2a2a,#007ACC, #2a2a2a);
 }
 .header-div{
     padding: 10px 15px;
