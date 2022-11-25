@@ -9,7 +9,6 @@ import { Spinner } from 'react-bootstrap';
 const Login = () => {
     let [email, setEmail] = useState('');
     let [password, setPassword] = useState('');
-    let [errors, setErrors] = useState('');
 
     function handleEmail(e) {
         setEmail(e.target.value);
