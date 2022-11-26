@@ -21,35 +21,33 @@ const Login = () => {
 
     // --------- authentication using firebase hooks -------------------------
     const navigate = useNavigate();
-    
-    const [user] = useAuthState(auth);
+
+    // const [user] = useAuthState(auth);
     const [signInWithEmailAndPassword,
+        user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
     function handleSubmit(e) {
-        e.preventDefault();        
+        e.preventDefault();
         signInWithEmailAndPassword(email, password);
-        return;
     }
 
     //----------------------------- working on protected route 
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
     const [signInWithGoogle] = useSignInWithGoogle(auth);
-    function handleGoogleSignIn(){
+    function handleGoogleSignIn() {
         signInWithGoogle();
         if (user) {
-            navigate('/');
             navigate(from, { replace: true });
         }
     }
     if (user) {
-        navigate('/');
         navigate(from, { replace: true });
     }
-    
+
 
 
     return (
@@ -60,6 +58,7 @@ const Login = () => {
                         <div className=" form-div ">
                             <h2>Log In</h2>
                             <hr style={{ marginBottom: "40px" }} />
+
                             <form action="" onSubmit={handleSubmit}>
                                 <div className="email-field">
                                     <p>Email :</p>
@@ -79,11 +78,11 @@ const Login = () => {
                                 </div>
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
-                                <h4>Or</h4>
+                                {/* <h4>Or</h4>
                                 <div onClick={handleGoogleSignIn} draggable className="googleButton">
                                     <img src={googleLogo} alt="" />
                                     <h4>Sign in Using Google</h4>
-                                </div>
+                                </div> */}
                             </form>
                         </div>
                     </div>
