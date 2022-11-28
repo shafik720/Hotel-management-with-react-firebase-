@@ -24,6 +24,11 @@
     height: 30px;
     width: 30px;
 }
+.checkboxDiv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .form-div p{
     margin: 15px 0 5px 0;

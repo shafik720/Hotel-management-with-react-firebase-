@@ -77,6 +77,7 @@ const Login = () => {
                                     <p>{error ? error.message : ''}</p>
                                     <div className="checkboxDiv">
                                         <input className='checkbox' type="checkbox" name="checkbox" id="" />
+                                        <label htmlFor="checkbox">Accept Terms and Conditions</label>
                                     </div>
                                 </div>
                                 <button>Login</button>
