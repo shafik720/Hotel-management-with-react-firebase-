@@ -4,7 +4,7 @@ import './Login.css';
 import googleLogo from '../../google.svg';
 import auth from '../../firebase.init';
 import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
-import { Spinner } from 'react-bootstrap';
+import { Form, Spinner } from 'react-bootstrap';
 
 const Login = () => {
     let [email, setEmail] = useState('');
@@ -75,6 +75,9 @@ const Login = () => {
                                         ''
                                     }</p>
                                     <p>{error ? error.message : ''}</p>
+                                    <div className="checkboxDiv">
+                                        <input className='checkbox' type="checkbox" name="checkbox" id="" />
+                                    </div>
                                 </div>
                                 <button>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
