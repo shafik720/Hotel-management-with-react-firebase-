@@ -21,13 +21,16 @@
 }
 
 .checkbox{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
 }
 .checkboxDiv{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.checkboxDiv label{
+    margin-left: 15px;
 }
 
 .form-div p{
