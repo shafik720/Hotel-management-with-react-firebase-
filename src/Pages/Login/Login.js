@@ -82,7 +82,7 @@ const Login = () => {
                                         <label className={agree ? 'active' : 'notActive'} htmlFor="checkbox">Accept Terms and Conditions</label>
                                     </div>
                                 </div>
-                                <button>Login</button>
+                                <button disabled={agree ? false : true}>Login</button>
                                 <p className="signUpText">Dont Have an Account ? <Link to="/signup">Sign Up Here</Link> </p>
                                 {/* <h4>Or</h4>
                                 <div onClick={handleGoogleSignIn} draggable className="googleButton">
