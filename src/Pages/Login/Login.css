@@ -92,6 +92,13 @@
     text-decoration: none;
 }
 
+.active{
+    color: blue;
+}
+.notActive{
+    color: red;
+}
+
 
 @media only screen and (max-width:767px){
     .form-div{

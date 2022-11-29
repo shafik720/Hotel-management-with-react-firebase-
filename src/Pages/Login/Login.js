@@ -48,7 +48,9 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
-
+    // working on checkbox 
+    const[agree, setAgree] = useState(false);
+    
 
     return (
         <div>
@@ -76,8 +78,8 @@ const Login = () => {
                                     }</p>
                                     <p>{error ? error.message : ''}</p>
                                     <div className="checkboxDiv">
-                                        <input className='checkbox' type="checkbox" name="checkbox" id="" />
-                                        <label htmlFor="checkbox">Accept Terms and Conditions</label>
+                                        <input onClick={()=>setAgree(!agree)} className='checkbox' type="checkbox" name="checkbox" id="" />
+                                        <label className={agree ? 'active' : 'notActive'} htmlFor="checkbox">Accept Terms and Conditions</label>
                                     </div>
                                 </div>
                                 <button>Login</button>
