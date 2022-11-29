@@ -98,6 +98,9 @@
 .notActive{
     color: red;
 }
+.greyButton{
+    background: grey !important;
+}
 
 
 @media only screen and (max-width:767px){
